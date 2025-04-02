@@ -1,0 +1,403 @@
+/* Universal Styles */
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body, main {
+    height: 100%;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(120, 120, 120);
+    z-index: 99;
+}
+
+header p {
+    display: inline-block;
+    font-family: 'Frijole';
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+}
+
+header nav {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+header a {
+    text-decoration: none;
+    font-family: 'Delius';
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    align-self: center;
+    padding: 1rem 1.2rem;
+}
+
+header a:last-of-type {
+    background-color: rgb(200, 30, 130);
+    padding: 0.75rem 1.2rem;
+    border-radius: 1rem;
+}
+
+header a:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+header a:last-of-type:hover {
+    background-color: rgb(170, 0, 100);;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    height: 50%;
+    background-image: url('../images/hero1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-family: 'Frijole';
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    backdrop-filter: brightness(25%);
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+}
+
+/* Purpose */
+.purpose {
+    top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    height: auto;
+}
+
+.purpose h2 {
+    font-family: 'Delius';
+    font-size: 2.5rem;
+    padding: 2.5rem 0 0;
+    width: 80%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.purpose p {
+    width: 80%;
+    font-family: 'Instrument Sans';
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 2.5rem 0 3rem;
+}
+
+/* Team */
+.team {
+    display: flex;
+    position: relative;
+    top: 5%;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.team figure {
+    width: 350px;
+    height: 80%;
+    overflow: hidden;
+    margin: 0 5%;
+    border-radius: 2%;
+    position: relative;
+}
+
+.team figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.team figure .container {
+    position: absolute;
+    top: 85%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(30, 30, 30, 0.75);
+    z-index: 20;
+    transition: all 0.8s ease;
+}
+
+.team figure .container .arrow {
+    color: rgb(180, 180, 180);
+    text-align: center;
+    font-family: 'Frijole';
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.team figure .container .name {
+    color: rgb(255, 255, 255);
+    font-family: 'Delius';
+    font-size: 1.5rem;
+    padding: 0 1rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.8s ease 0.8s;
+}
+
+.team figure .container span {
+    display: none;
+    font-family: 'Instrument Sans';
+    font-size: 1.25rem;
+    padding: 0 1rem 0.5rem;
+    transition: all 0.8s ease 0.8s;
+}
+
+.team figure .container .job {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.team figure .container .info {
+    color:rgb(255, 255, 255);
+}
+
+.team figure:hover .container {
+    top: 65%;
+    height: 35%;
+}
+
+.team figure:hover .container .name {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.team figure:hover .container span {
+    display: block;
+}
+
+/* Community */
+
+.community {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.community article {
+    width: 350px;
+    height: 50%;
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+    margin: 0 0 5%;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    transition: height 0.8s ease,
+                margin 0.8s ease;
+}
+
+.community article img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.community article p, .name {
+    width: 90%;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 0;
+}
+
+.community article .name {
+    font-family: 'Delius';
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.community article p {
+    font-family: 'Instrument Sans';
+    font-size: 1.25rem;
+    padding: 0.5rem 0 0 0;
+}
+
+.community article:hover {
+    height: 55%;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    display: block;
+    position: relative;
+    top: 20%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.footer h3 {
+    padding-left: 1em;
+    font-family: 'Delius';
+    font-size: 1rem;
+    color:rgb(30, 30, 30);
+}
+
+/* MEDIA INQUIRIES */
+@media only screen and (min-width: 2100px) {
+    html {
+        font-size: 24px;
+    }
+    
+    .community {
+        height: 50%;
+    }
+
+    .community article {
+        height: 80%;
+    }
+
+    .community article:hover {
+        height: 85%;
+    }
+
+    .footer {
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 1051px) {
+    header p {
+        display: none;
+    }
+    
+    header nav {
+        width: 100%;
+    }
+    
+    .community {
+        height: 60%;
+    }
+
+    .community article img {
+        height: 65%;
+    }
+    
+    .footer {
+        top: 50%;
+    }
+}
+
+@media only screen and (max-width: 879px) {
+    .team {
+        width: 100%;
+    }
+    
+    .team figure {
+        width: 100%;
+        height: 45%;
+    }
+
+    .team figure .container {
+        top: 75%;
+        height: 25%;
+    }
+
+    .team figure:hover .container {
+        top: 25%;
+        height: 75%;
+    }
+
+    .community article {
+        width: 95%;
+        height: 35%;
+    }
+
+    .community article:hover {
+        height: 40%;
+    }
+
+    .community article img {
+        height: 70%;
+    }
+
+    .community article .name {
+        font-size: 1.25rem;
+    }
+
+    .community article p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        top: 95%;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    header nav a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    header {
+        height: 10%;
+    }
+    
+    header nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
